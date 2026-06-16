@@ -1,0 +1,171 @@
+:host {
+  display: block;
+}
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background-image:url("/assets/bg IMG.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 120px 20px 80px;
+}
+
+.badge {
+  background: #f3efff;
+  color: #6246ea;
+
+  padding: 12px 28px;
+  border-radius: 999px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(50px, 7vw, 90px);
+  font-weight: 700;
+
+  line-height: 1.05;
+  letter-spacing: -1px;
+
+  max-width: 1200px;
+
+  color: #111;
+
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  display: block;
+  color: #6246ea;
+}
+
+.hero p {
+  max-width: 800px;
+
+  margin-top: 5px;
+
+  color: #666;
+  line-height: 1.7;
+
+  font-size: 20px;
+}
+
+.buttons {
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.primary {
+  background: #6246ea;
+  color: #fff;
+
+  border: none;
+
+  padding: 18px 40px;
+
+  border-radius: 14px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  background: #5236dc;
+}
+
+.secondary {
+  background: #fff;
+  color: #6246ea;
+
+  border: 1px solid #ddd;
+
+  padding: 18px 40px;
+
+  border-radius: 14px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.secondary:hover {
+  transform: translateY(-3px);
+  border-color: #6246ea;
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+
+  .hero {
+    padding: 140px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .badge {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .primary,
+  .secondary {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .hero h1 {
+    font-size: 70px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}

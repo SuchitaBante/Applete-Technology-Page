@@ -1,34 +1,49 @@
 <header class="navbar">
+
+  <!-- Logo -->
   <div class="logo">
     <img src="/assets/images/APPLET LOGO.png" alt="logo">
   </div>
 
-  <nav>
-  <a routerLink="/">Home</a>
-  <a routerLink="/about">About</a>
-  <div class="dropdown">
-
-  <a routerLink="/services">Services</a>
-
-  <i
-    class="fa-solid fa-chevron-down dropdown-icon"
-    (click)="toggleServices()">
-  </i>
-
-  <div class="dropdown-menu" *ngIf="showServices">
-    <a href="#">Web Development</a>
-    <a href="#">App Development</a>
-    <a href="#">Digital Marketing</a>
-    <a href="#">Technical Support</a>
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
+    <i class="fa-solid fa-bars"></i>
   </div>
 
-  
+  <!-- Navigation -->
+  <nav [class.active]="isMenuOpen">
 
-</div>
-  <a routerLink="/contact">Contact</a>
-</nav>
+    <a routerLink="/" (click)="isMenuOpen=false">Home</a>
 
-  <button class="info">Let's talk
-            <i class="fa-solid fa-arrow-right"></i>
-  </button>
+    <a routerLink="/about" (click)="isMenuOpen=false">About</a>
+
+    <div class="dropdown">
+
+      <a routerLink="/services" (click)="isMenuOpen=false">
+        Services
+      </a>
+
+      <i
+        class="fa-solid fa-chevron-down dropdown-icon"
+        (click)="toggleServices()">
+      </i>
+
+      <div class="dropdown-menu" *ngIf="showServices">
+        <a href="#">Web Development</a>
+        <a href="#">App Development</a>
+        <a href="#">Digital Marketing</a>
+        <a href="#">Technical Support</a>
+      </div>
+
+    </div>
+
+    <a routerLink="/contact" (click)="isMenuOpen=false">Contact</a>
+
+    <button class="info">
+      Let's Talk
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+  </nav>
+
 </header>

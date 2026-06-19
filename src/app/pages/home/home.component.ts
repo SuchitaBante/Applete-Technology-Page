@@ -55,8 +55,15 @@ export class HomeComponent {
 
   }
 
+  
+  isMenuOpen = false;
+  showServices = false;
+
+  toggleServices() {
+    this.showServices = !this.showServices;
+
 }
 
-
+}
 
 

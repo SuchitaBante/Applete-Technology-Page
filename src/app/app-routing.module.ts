@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'services', component: ServiceComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
-
+ 
   { path: '**', redirectTo: 'home' }
 ];
 

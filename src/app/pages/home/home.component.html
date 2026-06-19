@@ -1,8 +1,63 @@
+<header class="navbar">
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="/assets/images/APPLET LOGO.png" alt="logo">
+  </div>
+
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <!-- Navigation -->
+  <nav [class.active]="isMenuOpen">
+
+    <a routerLink="/" (click)="isMenuOpen=false">Home</a>
+
+    <a routerLink="/about" (click)="isMenuOpen=false">About</a>
+
+    <div class="dropdown">
+
+      <a routerLink="/services" (click)="isMenuOpen=false">
+        Services
+      </a>
+
+      <i class="fa-solid fa-chevron-down dropdown-icon" (click)="toggleServices()">
+      </i>
+
+      <div class="dropdown-menu" *ngIf="showServices">
+        <a href="#">Web Development</a>
+        <a href="#">App Development</a>
+        <a href="#">Digital Marketing</a>
+        <a href="#">Technical Support</a>
+      </div>
+
+    </div>
+
+    <a routerLink="/contact" (click)="isMenuOpen=false">Contact</a>
+
+    <button class="info">
+      Let's Talk
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+  </nav>
+
+</header>
+
+
+
+
+
+
+<!-- .....Hero.... -->
+
 <section class="hero">
   <!-- <p class="tag">IT COMPANY & SERVICES</p> -->
   <div class="badge">
-  ● Welcome To Applet
-</div>
+    ● Welcome To Applet
+  </div>
 
   <h1>
     Empowering Businesses with <br>
@@ -17,84 +72,87 @@
     <button class="primary">Get Started Now →</button>
     <!-- <button class="secondary"> Watch videos</button> -->
     <button class="secondary">
-  <i class="fa-regular fa-circle-play"></i>
-  Watch Videos
-</button>
+      <i class="fa-regular fa-circle-play"></i>
+      Watch Videos
+    </button>
   </div>
 </section>
 
 <!-- -------------------------------------- -->
+
+
+
 <body>
   <section class="about-section">
-  <div class="container">
+    <div class="container">
 
-    <div class="about-image">
+      <div class="about-image">
 
-      <div class="image-box">
-        <img src="assets/images/about01.jpg" alt="About Us">
+        <div class="image-box">
+          <img src="assets/images/about01.jpg" alt="About Us">
+        </div>
+
+        <div class="experience-card">
+          <h2 class="mb-3">3+</h2>
+          <p>Years Experience</p>
+        </div>
+
       </div>
 
-      <div class="experience-card">
-        <h2 class="mb-3">3+</h2>
-        <p>Years Experience</p>
+      <div class="about-content">
+
+        <h2>
+          Building Digital Solutions That
+          <br>
+          Help
+          <br>
+          Businesses Grow
+        </h2>
+
+        <p class="description">
+          We provide result-focused technology and marketing services for businesses
+          that want to build a strong online presence. From website development to
+          mobile apps, digital marketing, and technical support, we deliver solutions
+          that are practical, scalable, and business-friendly.
+        </p>
+
+        <div class="features">
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span class="p-2">Professional Online Presence</span>
+          </div>
+
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span class="p-2">Customizable Solutions</span>
+          </div>
+
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span class="p-2">24/7 Availability</span>
+          </div>
+
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span class="p-2">Skilled and Trained Team</span>
+          </div>
+
+          <div class="feature-item">
+            <span class="check-icon">✓</span>
+            <span class="p-2">Use of Advanced Technology</span>
+          </div>
+
+        </div>
+
+        <button class="view-btn">
+          View More
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
       </div>
 
     </div>
-
-    <div class="about-content">
-
-      <h2>
-        Building Digital Solutions That
-        <br>
-         Help
-         <br>
-        Businesses Grow
-      </h2>
-
-      <p class="description">
-        We provide result-focused technology and marketing services for businesses
-        that want to build a strong online presence. From website development to
-        mobile apps, digital marketing, and technical support, we deliver solutions
-        that are practical, scalable, and business-friendly.
-      </p>
-
-      <div class="features">
-<div class="feature-item">
-  <span class="check-icon">✓</span>
-  <span class="p-2">Professional Online Presence</span>
-</div>
-
-<div class="feature-item">
-  <span class="check-icon">✓</span>
-  <span class="p-2">Customizable Solutions</span>
-</div>
-
-<div class="feature-item">
-  <span class="check-icon">✓</span>
-  <span class="p-2">24/7 Availability</span>
-</div>
-
-<div class="feature-item">
-  <span class="check-icon">✓</span>
-  <span class="p-2">Skilled and Trained Team</span>
-</div>
-
-<div class="feature-item">
-  <span class="check-icon">✓</span>
-  <span class="p-2">Use of Advanced Technology</span>
-</div>
-
-      </div>
-
-      <button class="view-btn">
-        View More 
-        <i class="fa-solid fa-arrow-right"></i>
-      </button>
-
-    </div>
-
-  </div>
-</section>
+  </section>
 </body>
 
 
@@ -102,7 +160,7 @@
 <section class="services-section">
 
   <div class="services-header">
-   <span class="service-tag">Our Services</span>
+    <span class="service-tag">Our Services</span>
 
     <h2>Our Digital Services</h2>
 
@@ -119,7 +177,7 @@
 
       <div class="card-top">
         <h3>Web Development</h3>
-    <span style="font-size:18px;font-weight:bold;">↗</span>
+        <span style="font-size:18px;font-weight:bold;">↗</span>
       </div>
 
       <p>
@@ -134,7 +192,7 @@
 
       <div class="card-top">
         <h3>App Development</h3>
-       <span style="font-size:18px;font-weight:bold;">↗</span>
+        <span style="font-size:18px;font-weight:bold;">↗</span>
       </div>
 
       <p>
@@ -149,7 +207,7 @@
 
       <div class="card-top">
         <h3>Digital Marketing</h3>
-      <span style="font-size:18px;font-weight:bold;">↗</span>
+        <span style="font-size:18px;font-weight:bold;">↗</span>
       </div>
 
       <p>
@@ -165,7 +223,7 @@
 
       <div class="card-top">
         <h3>Technical Support</h3>
-       <span style="font-size:18px;font-weight:bold;">↗</span>
+        <span style="font-size:18px;font-weight:bold;">↗</span>
       </div>
 
       <p>
@@ -191,11 +249,12 @@
     <div class="container">
       <!-- Left Content -->
       <div class="why-content">
-      <span class="why-tag">Why Choose Us</span>
+        <span class="why-tag">Why Choose Us</span>
 
-        <h2>Your Trusted Partner for 
+        <h2>Your Trusted Partner for
           <br>
-          Digital Growth</h2>
+          Digital Growth
+        </h2>
         <p>
           We combine technology, creativity, and expertise to deliver solutions
           that help businesses succeed in today's competitive digital world. Our
@@ -216,10 +275,7 @@
       <div class="why-image">
         <div class="shape-top"></div>
 
-        <img
-          src="/assets/images/6d5a75e0410665636f841888b71b97fde682d141.jpg"
-          alt="Why Choose Us"
-        />
+        <img src="/assets/images/6d5a75e0410665636f841888b71b97fde682d141.jpg" alt="Why Choose Us" />
 
         <div class="shape-bottom"></div>
       </div>
@@ -255,16 +311,11 @@
         </p>
 
       </div>
-<div class="curve">
-  <svg width="135" height="50" viewBox="0 0 135 33">
-    <path
-      d="M5 28 Q67.5 -5 130 28"
-      fill="none"
-      stroke="#000"
-      stroke-width="1"
-      stroke-dasharray="9 9"/>
-  </svg>
-</div>
+      <div class="curve">
+        <svg width="135" height="50" viewBox="0 0 135 33">
+          <path d="M5 28 Q67.5 -5 130 28" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="9 9" />
+        </svg>
+      </div>
 
       <!-- Step 2 -->
       <div class="work-card">
@@ -286,15 +337,10 @@
       </div>
 
       <div class="curve reverse">
-  <svg width="135" height="33" viewBox="0 0 135 33">
-    <path
-      d="M5 5 Q67.5 38 130 5"
-      fill="none"
-      stroke="#000"
-      stroke-width="1"
-      stroke-dasharray="9 9"/>
-  </svg>
-</div>
+        <svg width="135" height="33" viewBox="0 0 135 33">
+          <path d="M5 5 Q67.5 38 130 5" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="9 9" />
+        </svg>
+      </div>
 
       <!-- Step 3 -->
       <div class="work-card">
@@ -314,17 +360,12 @@
 
       </div>
 
-      
+
       <div class="curve">
-  <svg width="135" height="50" viewBox="0 0 135 33">
-    <path
-      d="M5 28 Q67.5 -5 130 28"
-      fill="none"
-      stroke="#000"
-      stroke-width="1"
-      stroke-dasharray="9 9"/>
-  </svg>
-</div>
+        <svg width="135" height="50" viewBox="0 0 135 33">
+          <path d="M5 28 Q67.5 -5 130 28" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="9 9" />
+        </svg>
+      </div>
       <!-- Step 4 -->
       <div class="work-card">
 
@@ -612,24 +653,24 @@
             </ul>
           </div>
 
-       
+
           <div class="ganii">
             <div class="footer-col">
-            <h4>Contact</h4>
+              <h4>Contact</h4>
 
-            <p class="address">
-              <strong>Operational Address:</strong><br /><br />
+              <p class="address">
+                <strong>Operational Address:</strong><br /><br />
 
-              47, Kotwal Nagar, Khamla, Nagpur,<br />
-              Maharashtra 440022, India
-            </p>
+                47, Kotwal Nagar, Khamla, Nagpur,<br />
+                Maharashtra 440022, India
+              </p>
 
-            <p class="email">HR-Manager@Applettechnologyservices.com</p>
+              <p class="email">HR-Manager@Applettechnologyservices.com</p>
+            </div>
           </div>
         </div>
-          </div>
 
-       
+
 
         <div class="footer-bottom">
           <div class="footer-links">

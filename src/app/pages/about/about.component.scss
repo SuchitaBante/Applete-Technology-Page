@@ -1,0 +1,158 @@
+.about-section {
+  background: #f7f8fa;
+  padding: 100px 8%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Left Side */
+
+.about-image {
+  position: relative;
+  flex: 1;
+}
+
+.image-box {
+  position: relative;
+  background: #c4b5fd;
+  border-radius: 25px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.image-box img {
+  width: 470.92px;
+  height: 351.49px;
+  display: block;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.experience-card {
+  position: absolute;
+  left: -40px;
+  bottom: -30px;
+  width: 210px;
+  height: 120px;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card h2 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.experience-card p {
+  margin: 0;
+  font-size: 20px;
+}
+
+/* Right Side */
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 33px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #666769;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 50px;
+  margin-bottom: 40px;
+}
+
+.feature-item i {
+  font-size: 15px;
+  color: blue;
+}
+
+.view-btn {
+  border: none;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: white;
+  padding: 15px 38px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: block;
+  }
+  .image-box {
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+ 
+.view-btn {
+  border: none;
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+  .experience-card {
+    left: -40px;
+    bottom: -30px;
+    width: 150px;
+    height: 120px;
+    padding-left: 40px;
+  }
+  .about-content h2 {
+  font-size: 33px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 35px;
+  color: #111827;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 15px;
+  margin-bottom:40px;
+}
+
+}
+@media (min-width:768px) and (max-width:1024px){
+
+}

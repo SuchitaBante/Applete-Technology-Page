@@ -1,0 +1,138 @@
+.blog-section{
+  background:#f7f8fa;
+  padding:100px 8%;
+}
+
+.blog-header{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 50px;
+}
+
+.blog-tag{
+  display:inline-block;
+  background:#d9c8ff;
+  color:#6c4df6;
+  border-radius:30px;
+  height: 20px;
+  width: 45px;
+  font-size:10px;
+  margin-bottom:30px;
+}
+
+.blog-header h2{
+  font-size:40px;
+  font-weight:500;
+  color:#111;
+  margin-bottom:20px;
+}
+
+.blog-header p{
+  font-size:15px;
+  line-height:1.5;
+  color:#555;
+}
+
+.blog-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  padding: 5px 8%;
+}
+
+.blog-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  height: 400px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  transition:all 0.4s ease;
+}
+.blog-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.blog-image{
+  position:relative;
+    overflow:hidden;
+
+}
+
+.blog-image img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  display:block;
+    transition:transform 0.5s ease;
+
+}
+.blog-card:hover .blog-image img{
+  transform:scale(1.1);
+}
+
+.date-tag{
+  position:absolute;
+  top:16px;
+  left:16px;
+  background:#6c4df6;
+  color:#fff;
+  padding:4px 16px;
+  border-radius:30px;
+  font-size:10px;
+  font-weight:500;
+}
+
+.blog-content{
+  padding:25px;
+}
+
+.blog-content h3{
+  font-size:18px;
+  line-height:1.2;
+  color:#111;
+  margin-bottom:30px;
+}
+
+.blog-content p{
+  font-size:12px;
+  line-height:1.9;
+  color:#666;
+  margin-bottom:30px;
+}
+
+.blog-content a{
+  text-decoration:none;
+  color:#6c4df6;
+  font-size:14px;
+  font-weight:500;
+}
+
+.blog-content a i{
+  margin-left:8px;
+}
+
+/*   MOBILE */
+
+@media (max-width: 768px){
+    .blog-section{
+  background:#f7f8fa;
+  padding:5px 2%;
+}
+    .blog-container{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:30px;
+  padding: 2px 2%;
+}
+.blog-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  height: 400px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  transition:all 0.4s ease;
+}
+
+
+}
